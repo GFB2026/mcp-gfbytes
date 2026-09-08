@@ -6,7 +6,7 @@ Paste the HTTPS MCP URL you put in Claude, Cursor, Desktop, or Grok. This app pr
 
 | | |
 |---|---|
-| **Live checker** | [mcp-gfbytes.vercel.app](https://mcp-gfbytes.vercel.app/) |
+| **Live checker** | [mcp-gfbytes.vercel.app](https://check.gfbytes.com/) |
 | **Product** | [gfbytes.com/products/mcp-oauth-connect](https://gfbytes.com/products/mcp-oauth-connect/) |
 | **Free CLI / plugin** | [`GFB2026/mcp-oauth-connect`](https://github.com/GFB2026/mcp-oauth-connect) |
 | **Demo MCP** | `https://mcp.gfbytes.com` |
