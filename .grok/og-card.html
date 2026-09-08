@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>OG</title>
+    <style>
+      @font-face {
+        font-family: "Newsreader";
+        src: url("fonts/Newsreader-opsz-wght.ttf") format("truetype");
+        font-weight: 200 800;
+        font-style: normal;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "IBM Plex Sans";
+        src: url("fonts/IBMPlexSans-Regular.ttf") format("truetype");
+        font-weight: 100 700;
+        font-style: normal;
+        font-display: block;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #f6f7f5;
+        color: #141816;
+      }
+      body {
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: flex;
+        flex-direction: column;
+        padding: 56px 80px 52px;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #d7dbd4;
+        flex-shrink: 0;
+      }
+      .mark {
+        width: 40px;
+        height: 40px;
+        display: block;
+        flex-shrink: 0;
+      }
+      .kicker {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #5a635e;
+      }
+      .kicker b {
+        color: #141816;
+        font-weight: 600;
+      }
+      .dot {
+        color: #168a55;
+        padding: 0 0.15em;
+        letter-spacing: 0;
+      }
+      .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 0;
+      }
+      .sage {
+        width: 44px;
+        height: 3px;
+        background: #168a55;
+        border-radius: 1px;
+        margin-bottom: 28px;
+      }
+      h1 {
+        font-family: "Newsreader", Georgia, serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-size: 72px;
+        line-height: 1.05;
+        letter-spacing: -0.028em;
+        font-variation-settings: "opsz" 72, "wght" 500;
+        max-width: 14.5ch;
+      }
+      .foot {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #d7dbd4;
+        flex-shrink: 0;
+      }
+      .product {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        color: #141816;
+      }
+      .meta {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #8a938e;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="64" height="64" rx="8" fill="#141816" />
+        <path d="M16 18 L32 32 L16 46" stroke="#168a55" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M34 46 H50" stroke="#168a55" stroke-width="6" stroke-linecap="round" />
+      </svg>
+      <p class="kicker"><b>GFB</b><span class="dot">·</span>products</p>
+    </header>
+    <main class="main">
+      <div class="sage"></div>
+      <h1>Why Connectors fail<br />when curl works.</h1>
+    </main>
+    <footer class="foot">
+      <p class="product">MCP OAuth Connect</p>
+      <p class="meta">OAuth discovery</p>
+    </footer>
+  </body>
+</html>

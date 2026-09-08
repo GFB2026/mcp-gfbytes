@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f6f7f5;
+  --color-paper: #ffffff;
+  --color-fg: #141816;
+  --color-mute: #5a635e;
+  --color-faint: #8a938e;
+  --color-line: #d7dbd4;
+  --color-line-strong: #c4cac0;
+  --color-accent: #168a55;
+  --color-accent-hover: #127348;
+  --color-accent-ink: #ffffff;
+  --color-challenge: #b77814;
+  --color-fail: #b42318;
+  --color-ok: #168a55;
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --text-kicker: 0.72rem;
+  --tracking-kicker: 0.14em;
+  --text-display: clamp(2.05rem, 7vw, 3.4rem);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  a,
+  button {
+    transition:
+      color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 150ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 150ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .kicker {
+    font-size: var(--text-kicker);
+    font-weight: 600;
+    letter-spacing: var(--tracking-kicker);
+    text-transform: uppercase;
+  }
+
+  .skeleton {
+    background: var(--color-line);
+    animation: pulse-line 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-line {
+  50% {
+    opacity: 0.42;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
