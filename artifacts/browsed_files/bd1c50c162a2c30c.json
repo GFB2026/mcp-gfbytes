@@ -1,1 +1,0 @@
-{"resource":"https://api.inference.sh","authorization_servers":["https://api.inference.sh"],"scopes_supported":["apps:read","apps:execute"],"bearer_methods_supported":["header"]}

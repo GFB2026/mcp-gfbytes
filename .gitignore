@@ -1,5 +1,42 @@
+# deps / env
 node_modules/
-.project_id
-.github_repo
 .env
 .env.*
+!.env.example
+
+# App Builder / local tooling leftovers
+.project_id
+.github_repo
+.grok/
+.node_modules.lock
+
+# build / deploy output (never commit)
+.vercel/
+dist/
+.output/
+.nitro/
+.tanstack/
+.wrangler/
+
+# local DB / auth state
+*.db
+*.db-*
+.pglite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# test / coverage
+coverage/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# scratch
+artifacts/
+attachments/
+*.log

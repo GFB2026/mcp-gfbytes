@@ -1,6 +1,5 @@
 {
-  "name": "app-builder-workspace",
-  "private": true,
+  "name": "mcp-gfbytes",
   "sideEffects": false,
   "type": "module",
   "overrides": {
@@ -93,5 +92,7 @@
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.56.1",
     "vite": "^8.2.0"
-  }
+  },
+  "description": "MCP OAuth Connect web checker — why Connectors fail when curl works",
+  "private": true
 }
