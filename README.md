@@ -6,12 +6,13 @@ Paste the HTTPS MCP URL you put in Claude, Cursor, Desktop, or Grok. This app pr
 
 | | |
 |---|---|
+| **Live checker** | [mcp-gfbytes.vercel.app](https://mcp-gfbytes.vercel.app/) |
 | **Product** | [gfbytes.com/products/mcp-oauth-connect](https://gfbytes.com/products/mcp-oauth-connect/) |
 | **Free CLI / plugin** | [`GFB2026/mcp-oauth-connect`](https://github.com/GFB2026/mcp-oauth-connect) |
 | **Demo MCP** | `https://mcp.gfbytes.com` |
 | **Attach trace** | $149 — Stripe checkout on the product page |
 
-This repo is the **web checker** (TanStack Start). The public skill repo is the free `diagnose.py` + marketplace install. Same probe semantics; this UI is the product surface.
+This repo is the **web checker** (TanStack Start). The public skill repo is the free `diagnose.py` + marketplace install. Same probe semantics; this UI is the product surface. **Live SoT for the free check UI is the Vercel deploy**, not a committed `.vercel/output`.
 
 ## Screenshots
 
