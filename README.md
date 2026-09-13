@@ -64,6 +64,12 @@ server/        Nitro / PWA middleware
 
 Build output (`.vercel/`, `dist/`) is gitignored — do not commit deploy artifacts.
 
+## For AI assistants / contributors
+
+Safe work: docs, diagnose unit tests (`cd diagnose && python -m pytest tests/`), `npm test`, `npm run typecheck`, and the GitHub Copilot files under `.github/` plus `.copilotignore`. Do not replace `.github/workflows/tests.yml`.
+
+The free check is discovery metadata only — do not add DCR, token mint, or `tools/list`. Do not commit secrets, `.env*` with credentials, a real `DATABASE_URL`, `.vercel/`, or `dist/`.
+
 ## License
 
 MIT

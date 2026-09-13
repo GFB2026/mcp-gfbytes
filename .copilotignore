@@ -1,0 +1,30 @@
+# Secrets and credentials — do not feed these to GitHub Copilot
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+secrets/
+**/secrets/
+credentials/
+**/credentials/
+**/*secret*
+**/*credential*
+
+# Deploy / build artifacts
+.vercel/
+dist/
+.output/
+.nitro/
+node_modules/
+
+# Large dumps and local leftovers
+*.dump
+*.sql.gz
+*.tar
+*.tar.gz
+*.zip
+artifacts/
+attachments/
+coverage/
+*.log
