@@ -30,6 +30,8 @@ This repo is the **web checker** (TanStack Start). The public skill repo is the 
 
 ## Clone / run
 
+Requires Node ≥22. No secrets needed for local dev — with `DATABASE_URL` unset, the app falls back to an embedded PGLite database automatically.
+
 ```bash
 git clone https://github.com/GFB2026/mcp-gfbytes.git
 cd mcp-gfbytes
