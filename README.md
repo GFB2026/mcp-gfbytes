@@ -1,5 +1,7 @@
 # MCP OAuth Connect — web checker
 
+[![tests](https://github.com/GFB2026/mcp-gfbytes/actions/workflows/tests.yml/badge.svg)](https://github.com/GFB2026/mcp-gfbytes/actions/workflows/tests.yml)
+
 **Why Connectors fail when curl works.**
 
 Paste the HTTPS MCP URL you put in Claude, Cursor, Desktop, or Grok. This app probes the OAuth discovery path those UIs actually need — not whether `curl` got a 200.
@@ -14,15 +16,23 @@ Paste the HTTPS MCP URL you put in Claude, Cursor, Desktop, or Grok. This app pr
 
 This repo is the **web checker** (TanStack Start). The public skill repo is the free `diagnose.py` + marketplace install. Same probe semantics; this UI is the product surface. **Live SoT for the free check UI is https://check.gfbytes.com/** (Vercel custom domain). Do not commit `.vercel/output`.
 
+## What this is not
+
+- **Not the CLI / plugin.** Clone [`mcp-oauth-connect`](https://github.com/GFB2026/mcp-oauth-connect) for that.
+- **Not a completed handshake.** Same as the CLI: discovery metadata only. No DCR, no token, no `tools/list`.
+- **Not a hosted MCP.** The demo remote is `https://mcp.gfbytes.com` (ping-only).
+
 ## Screenshots
 
 ![Checker verdict](screenshots/proof.png)
 
 ![Pitch + handshake](screenshots/proof-pitch.png)
 
-## Local
+## Clone / run
 
 ```bash
+git clone https://github.com/GFB2026/mcp-gfbytes.git
+cd mcp-gfbytes
 npm install
 npm run dev          # http://0.0.0.0:8080
 npm run typecheck
@@ -51,3 +61,7 @@ server/        Nitro / PWA middleware
 ```
 
 Build output (`.vercel/`, `dist/`) is gitignored — do not commit deploy artifacts.
+
+## License
+
+MIT
