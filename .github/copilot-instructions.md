@@ -1,8 +1,8 @@
 # GitHub Copilot — mcp-gfbytes
 
-This repository is the **public web checker** for MCP OAuth Connect (TanStack Start). Live UI: https://check.gfbytes.com/. Same probe semantics as `GFB2026/mcp-oauth-connect` `diagnose.py`. MIT. Metadata-only free path.
+This repository is the **free public web checker** for MCP OAuth discovery (TanStack Start). Live UI: https://check.gfbytes.com/. Probe logic mirrors `diagnose/diagnose.py`. MIT. Metadata-only free path.
 
-Shop-window pin: web UI companion to `mcp-oauth-connect`. Do not treat this repo as a fleet, ops, or private-product surface.
+Shop-window pin: free web checker only. Do not treat this repo as a fleet, ops, or private-product surface.
 
 ## Safe lanes
 
@@ -24,7 +24,7 @@ Do not commit `.vercel/`, `dist/`, or deploy artifacts. Local dev needs no secre
 - `COPILOT_MCP` or MCP config that can reach apps, ops, or `gc-mcp`
 - Fleet / `gc-mcp` work; greg-chat; gregops-plugins; gfb; private ILI / mail / money / client / intake
 - Handshake creep on the free check: DCR, token mint, or `tools/list`
-- Stripe live keys or checkout wiring beyond existing public product copy
+- Stripe keys, payment links, or checkout wiring
 - Private company internals
 
 ## Verify
