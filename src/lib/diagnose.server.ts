@@ -400,7 +400,7 @@ function buildFindings(report: DiagnoseReport): Finding[] {
     findings.push({
       severity: "ok",
       title: "Metadata looks attachable",
-      body: "A checker pass is not a handshake. The $149 attach trace still covers registration, the code exchange, and tools/list.",
+      body: "A checker pass is not a handshake. Client registration, the code exchange, and tools/list are not tested here.",
     });
   }
   return findings;

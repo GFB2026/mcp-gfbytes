@@ -1,4 +1,4 @@
-# MCP OAuth Connect — web checker
+# MCP OAuth web checker
 
 [![tests](https://github.com/GFB2026/mcp-gfbytes/actions/workflows/tests.yml/badge.svg)](https://github.com/GFB2026/mcp-gfbytes/actions/workflows/tests.yml)
 
@@ -9,24 +9,14 @@ Paste the HTTPS MCP URL you put in Claude, Cursor, Desktop, or Grok. This app pr
 | | |
 |---|---|
 | **Live checker** | [check.gfbytes.com](https://check.gfbytes.com/) |
-| **Product** | [gfbytes.com/products/mcp-oauth-connect](https://gfbytes.com/products/mcp-oauth-connect/) |
-| **Free CLI / plugin** | [`GFB2026/mcp-oauth-connect`](https://github.com/GFB2026/mcp-oauth-connect) |
 | **Demo MCP** | `https://mcp.gfbytes.com` |
-| **Attach trace** | $149 — Stripe checkout on the product page |
 
-This repo is the **web checker** (TanStack Start). The public skill repo is the free `diagnose.py` + marketplace install. Same probe semantics; this UI is the product surface. **Live SoT for the free check UI is https://check.gfbytes.com/** (Vercel custom domain). Do not commit `.vercel/output`.
+This repo is the free **web checker** (TanStack Start). **Live SoT for the check UI is https://check.gfbytes.com/** (Vercel custom domain). Do not commit `.vercel/output`.
 
 ## What this is not
 
-- **Not the CLI / plugin.** Clone [`mcp-oauth-connect`](https://github.com/GFB2026/mcp-oauth-connect) for that.
-- **Not a completed handshake.** Same as the CLI: discovery metadata only. No DCR, no token, no `tools/list`.
+- **Not a completed handshake.** Discovery metadata only. No DCR, no token, no `tools/list`.
 - **Not a hosted MCP.** The demo remote is `https://mcp.gfbytes.com` (ping-only).
-
-## Screenshots
-
-![Checker verdict](screenshots/proof.png)
-
-![Pitch + handshake](screenshots/proof-pitch.png)
 
 ## Clone / run
 
@@ -56,8 +46,8 @@ Authorization-server metadata (or OIDC fallback), PKCE S256, RFC 9728 protected-
 
 ```
 src/           web app (Checker UI + server diagnose)
-diagnose/      CLI diagnose.py + tests (mirrors public skill)
-screenshots/   product proof shots
+diagnose/      CLI diagnose.py + tests
+screenshots/   browser smoke output
 scripts/       build / env helpers
 server/        Nitro / PWA middleware
 ```

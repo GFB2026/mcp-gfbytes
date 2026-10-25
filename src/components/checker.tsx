@@ -16,9 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Mark } from "./mark";
 
-const STRIPE = "https://buy.stripe.com/3cI6oz64ybZJ2dP4ev3Nm0l";
-const GITHUB = "https://github.com/GFB2026/mcp-oauth-connect";
-const PRODUCT = "https://gfbytes.com/products/mcp-oauth-connect/";
+const SITE = "https://gfbytes.com/";
 
 function StatusGlyph({ ok, warn }: { ok: boolean; warn?: boolean }) {
   if (ok && !warn) {
@@ -108,18 +106,6 @@ export function Checker() {
             <span className="truncate text-base font-semibold tracking-wide">GFB</span>
             <span className="kicker hidden text-faint sm:inline">products</span>
           </a>
-          <nav className="flex items-center gap-4 text-sm text-mute">
-            <a className="hidden hover:text-fg sm:inline" href={GITHUB}>
-              GitHub
-            </a>
-            <a
-              className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap rounded-xs bg-accent px-3.5 text-sm font-medium text-accent-ink hover:bg-accent-hover"
-              href={STRIPE}
-            >
-              <span className="sm:hidden">$149</span>
-              <span className="hidden sm:inline">Attach trace — $149</span>
-            </a>
-          </nav>
         </div>
       </header>
 
@@ -302,18 +288,15 @@ export function Checker() {
           </section>
         ) : null}
 
-        <Pitch />
+        <Scope />
       </main>
 
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-3 px-5 py-8 text-sm text-mute">
           <span>© 2026 GFB · products</span>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
-            <a href={PRODUCT} className="hover:text-fg">
-              Product
-            </a>
-            <a href={GITHUB} className="hover:text-fg">
-              GitHub
+            <a href={SITE} className="hover:text-fg">
+              gfbytes.com
             </a>
           </div>
         </div>
@@ -336,52 +319,13 @@ function CheckingSkeleton() {
   );
 }
 
-function Pitch() {
+function Scope() {
   return (
     <section className="mt-14 border-t border-line pt-8">
       <h2 className="font-serif text-2xl font-medium">The checker never finishes a handshake</h2>
       <p className="mt-3 max-w-xl text-mute">
         The checker reads metadata. It does not register a client, exchange a
-        code, or call tools/list. That gap is the product. Failures and
-        unknowns are who the $149 attach trace is for.
-      </p>
-      <div className="mt-6 grid gap-0 sm:grid-cols-3">
-        {[
-          {
-            n: "1",
-            t: "Check",
-            s: "You paste a URL. Pass or fail, the $149 round still runs.",
-          },
-          {
-            n: "2",
-            t: "Attempt",
-            s: "We sign in from Claude, Cursor, Desktop, and Grok — our accounts, your server.",
-          },
-          {
-            n: "3",
-            t: "Trace",
-            s: "A written path per client. If it fails, that is the brief for a quoted fix round.",
-          },
-        ].map((c) => (
-          <article
-            key={c.n}
-            className="border-t border-line-strong py-5 pr-6 sm:border-t-0 sm:border-t sm:pt-5"
-          >
-            <p className="kicker text-faint">{c.n}</p>
-            <h3 className="mt-2 font-serif text-xl font-medium">{c.t}</h3>
-            <p className="mt-2 text-sm text-mute">{c.s}</p>
-          </article>
-        ))}
-      </div>
-      <a
-        href={STRIPE}
-        className="mt-6 inline-flex min-h-11 items-center rounded-xs bg-accent px-4 text-sm font-medium text-accent-ink hover:bg-accent-hover"
-      >
-        Get the attach trace — $149
-      </a>
-      <p className="mt-3 max-w-xl text-sm text-mute">
-        Refund if we cannot attach and cannot say why. Fix rounds after the
-        trace are quoted separately.
+        code, or call tools/list.
       </p>
     </section>
   );

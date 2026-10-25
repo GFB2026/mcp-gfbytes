@@ -96,6 +96,6 @@
     "typescript-eslint": "^8.56.1",
     "vite": "^8.2.0"
   },
-  "description": "MCP OAuth Connect web checker — why Connectors fail when curl works",
+  "description": "MCP OAuth web checker — why Connectors fail when curl works",
   "private": true
 }
